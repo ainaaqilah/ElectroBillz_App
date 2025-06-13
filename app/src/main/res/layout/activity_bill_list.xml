@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background">
+
+    <!-- Container Card -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_margin="20dp"
+        android:padding="16dp"
+        android:background="#80FFFFFF"
+        android:elevation="8dp"
+        android:layout_centerInParent="true"
+        android:clipToPadding="false"
+        android:backgroundTint="#FFFFFF"
+        android:gravity="center_horizontal">
+
+        <!-- Title -->
+        <TextView
+            android:id="@+id/tvBillListTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="List of Electric Bills"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:textColor="#4A0072"
+            android:layout_marginBottom="12dp"
+            android:contentDescription="Electric Bill List Title"
+            android:gravity="center" />
+
+        <!-- Divider -->
+        <View
+            android:layout_width="60dp"
+            android:layout_height="3dp"
+            android:background="#7B1FA2"
+            android:layout_marginBottom="20dp" />
+
+        <!-- List of Bills -->
+        <ListView
+            android:id="@+id/listViewBills"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:divider="@android:color/darker_gray"
+            android:dividerHeight="1dp"
+            android:contentDescription="List of monthly bills"
+            android:background="#00FAF8FF" />
+
+        <!-- Empty List Message -->
+        <TextView
+            android:id="@+id/emptyListMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="No bills added yet."
+            android:textColor="#999999"
+            android:textSize="16sp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:visibility="gone"
+            android:contentDescription="Message shown when no bills exist" />
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:padding="16dp"
+        android:background="@android:color/white"
+        android:elevation="6dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginBottom="32dp"
+        android:clipToPadding="false"
+        android:backgroundTint="#FFFFFF">
+
+        <!-- Title -->
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Electric Bill Form"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            android:textColor="#4A0072"
+            android:gravity="center"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="24dp"
+            android:contentDescription="Electric Bill Form Title" />
+
+        <!-- Month Label -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Select Your Month:"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="4dp" />
+
+        <!-- Month Spinner -->
+        <Spinner
+            android:id="@+id/spinnerMonth"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:drawable/btn_dropdown"
+            android:padding="10dp"
+            android:contentDescription="Month selection dropdown"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Units Label -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Electricity Units Used (kWh):"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            android:layout_marginBottom="4dp" />
+
+        <!-- Units Input -->
+        <EditText
+            android:id="@+id/editTextUnits"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="e.g. 150"
+            android:maxLength="4"
+            android:inputType="numberDecimal"
+            android:textColor="#000000"
+            android:background="@android:drawable/editbox_background"
+            android:padding="12dp"
+            android:layout_marginBottom="16dp"
+            android:contentDescription="Enter units used" />
+
+        <!-- Rebate Label -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Rebate Percentage (%):"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            android:layout_marginBottom="8dp" />
+
+        <!-- Rebate Radio Group -->
+        <RadioGroup
+            android:id="@+id/radioGroupRebate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="24dp">
+
+            <!-- Space each radio button slightly -->
+            <RadioButton android:id="@+id/radio0" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0" android:layout_marginEnd="2dp" />
+            <RadioButton android:id="@+id/radio1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="1" android:layout_marginEnd="2dp" />
+            <RadioButton android:id="@+id/radio2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="2" android:layout_marginEnd="2dp" />
+            <RadioButton android:id="@+id/radio3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="3" android:layout_marginEnd="2dp" />
+            <RadioButton android:id="@+id/radio4" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="4" android:layout_marginEnd="2dp" />
+            <RadioButton android:id="@+id/radio5" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="5" />
+        </RadioGroup>
+
+        <!-- Calculate Button -->
+        <Button
+            android:id="@+id/btnSave"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="Calculate"
+            android:backgroundTint="#7B1FA2"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:padding="12dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="24dp"
+            android:contentDescription="Calculate button" />
+
+        <!-- Results Header -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Calculation Results:"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            android:layout_marginBottom="8dp"
+            android:layout_gravity="center" />
+
+        <!-- Total Charges -->
+        <TextView
+            android:id="@+id/textViewTotalCharges"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Total Charges: RM 0.00"
+            android:textSize="18sp"
+            android:textColor="#4A0072"
+            android:textStyle="bold"
+            android:layout_marginTop="8dp"
+            android:layout_gravity="center" />
+
+        <!-- Final Cost -->
+        <TextView
+            android:id="@+id/textViewFinalCost"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Final Cost After Rebate: RM 0.00"
+            android:textSize="15sp"
+            android:textColor="#388E3C"
+            android:textStyle="bold"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="16dp"
+            android:layout_gravity="center" />
+
+    </LinearLayout>
+</ScrollView>

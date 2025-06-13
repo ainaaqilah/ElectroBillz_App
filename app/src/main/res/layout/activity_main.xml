@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="24dp"
+        android:gravity="center_horizontal">
+
+        <!-- App Logo -->
+        <ImageView
+            android:id="@+id/imageLogo"
+            android:layout_width="160dp"
+            android:layout_height="160dp"
+            android:src="@drawable/logo"
+            android:contentDescription="App logo"
+            android:layout_marginTop="32dp"
+            android:layout_marginBottom="24dp"
+            android:padding="12dp"
+            android:elevation="10dp" />
+
+        <!-- App Title -->
+        <TextView
+            android:id="@+id/textAppName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ElectroBillz"
+            android:textSize="38sp"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            android:shadowColor="#99000000"
+            android:shadowDx="2"
+            android:shadowDy="2"
+            android:shadowRadius="6"
+            android:layout_marginBottom="16dp"
+            android:fontFamily="sans-serif-medium"
+            android:letterSpacing="0.08" />
+
+        <!-- Buttons Container -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="50dp"
+            android:gravity="center_horizontal">
+
+            <!-- About Me Button -->
+            <Button
+                android:id="@+id/btnAbout"
+                android:layout_width="240dp"
+                android:layout_height="60dp"
+                android:text="About Me"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF"
+                android:background="@drawable/rounded_button"
+                android:layout_marginBottom="20dp"
+                android:elevation="8dp" />
+
+            <!-- Add New Bill Button -->
+            <Button
+                android:id="@+id/btnAddBill"
+                android:layout_width="240dp"
+                android:layout_height="60dp"
+                android:text="Add New Bill"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF"
+                android:background="@drawable/rounded_button"
+                android:layout_marginBottom="20dp"
+                android:elevation="8dp" />
+
+            <!-- View Bill List Button -->
+            <Button
+                android:id="@+id/btnViewList"
+                android:layout_width="240dp"
+                android:layout_height="60dp"
+                android:text="View Bill List"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF"
+                android:background="@drawable/rounded_button"
+                android:layout_marginBottom="20dp"
+                android:elevation="8dp" />
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

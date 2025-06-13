@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:background="@android:color/white"
+        android:elevation="6dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginBottom="32dp"
+        android:clipToPadding="false"
+        android:layout_gravity="center"
+        android:gravity="center_horizontal">
+
+        <!-- Title -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Update Bill Details"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            android:textColor="#4A0072"
+            android:layout_marginBottom="24dp"
+            android:gravity="center" />
+
+        <!-- Month Spinner -->
+        <Spinner
+            android:id="@+id/spinnerUpdateMonth"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:contentDescription="Select month" />
+
+        <!-- Units Input -->
+        <EditText
+            android:id="@+id/editTextUpdateUnits"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Electricity Units (kWh)"
+            android:inputType="numberDecimal"
+            android:layout_marginBottom="16dp"
+            android:padding="12dp"
+            android:background="@android:drawable/editbox_background"
+            android:textColor="#000000"
+            android:textColorHint="#888888"
+            android:contentDescription="Enter electricity usage in kWh" />
+
+        <!-- Rebate Label -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Select Rebate:"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp"
+            android:textColor="#4A0072" />
+
+        <!-- Rebate Radio Buttons -->
+        <RadioGroup
+            android:id="@+id/radioGroupUpdateRebate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="16dp">
+
+            <!-- 0% to 5% Options -->
+            <RadioButton
+                android:id="@+id/radioUpdate0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0%" />
+
+            <RadioButton
+                android:id="@+id/radioUpdate1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1%" />
+
+            <RadioButton
+                android:id="@+id/radioUpdate2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2%" />
+
+            <RadioButton
+                android:id="@+id/radioUpdate3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="3%" />
+
+            <RadioButton
+                android:id="@+id/radioUpdate4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="4%" />
+
+            <RadioButton
+                android:id="@+id/radioUpdate5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="5%" />
+        </RadioGroup>
+
+        <!-- Update Button -->
+        <Button
+            android:id="@+id/buttonSave"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text="Update"
+            android:backgroundTint="#9C27B0"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:padding="12dp"
+            android:layout_marginTop="24dp"
+            android:layout_gravity="center" />
+    </LinearLayout>
+</ScrollView>
