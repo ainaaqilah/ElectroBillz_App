@@ -55,7 +55,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Select Rebate:"
+            android:text="Select Rebate (%) :"
             android:textSize="18sp"
             android:textStyle="bold"
             android:layout_marginBottom="8dp"
@@ -74,37 +74,37 @@
                 android:id="@+id/radioUpdate0"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="0%" />
+                android:text="0" />
 
             <RadioButton
                 android:id="@+id/radioUpdate1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="1%" />
+                android:text="1" />
 
             <RadioButton
                 android:id="@+id/radioUpdate2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="2%" />
+                android:text="2" />
 
             <RadioButton
                 android:id="@+id/radioUpdate3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="3%" />
+                android:text="3" />
 
             <RadioButton
                 android:id="@+id/radioUpdate4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="4%" />
+                android:text="4" />
 
             <RadioButton
                 android:id="@+id/radioUpdate5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="5%" />
+                android:text="5" />
         </RadioGroup>
 
         <!-- Update Button -->
