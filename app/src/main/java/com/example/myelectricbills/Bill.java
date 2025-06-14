@@ -54,7 +54,7 @@ public class Bill implements Serializable {
         return finalCost;
     }
 
-    // Setters (needed for updates)
+    // Setters
     public void setId(int id) {
         this.id = id;
     }
