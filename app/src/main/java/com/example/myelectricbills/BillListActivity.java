@@ -56,7 +56,7 @@ public class BillListActivity extends AppCompatActivity {
             public void onItemClick(AdapterView<?> parent, android.view.View view, int position, long id) {
                 Bill selectedBill = billList.get(position);
 
-                final CharSequence[] options = {"View Bill Details", "Update Bill", "Delete Bill"};
+                final CharSequence[] options = {"View Bill Details", "Update Bill Details", "Delete Bill Details"};
                 AlertDialog.Builder builder = new AlertDialog.Builder(BillListActivity.this);
                 builder.setTitle("Select Action");
                 builder.setItems(options, new DialogInterface.OnClickListener() {
