@@ -87,8 +87,8 @@ public class UpdateBillActivity extends AppCompatActivity {
 
             if (success) {
                 Toast.makeText(this, "Bill updated successfully", Toast.LENGTH_SHORT).show();
-                setResult(RESULT_OK); // ✅ To refresh the list
-                finish(); // ✅ To finish the activity
+                setResult(RESULT_OK); // To refresh the list
+                finish(); // To finish the activity
             } else {
                 Toast.makeText(this, "Update failed", Toast.LENGTH_SHORT).show();
             }
