@@ -50,7 +50,7 @@ public class BillListActivity extends AppCompatActivity {
         adapter = new BillAdapter(this, billList);
         listView.setAdapter(adapter);
 
-        // Set OnItemClickListener with dialog popup (only once)
+        // Set OnItemClickListener with dialog popup
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, android.view.View view, int position, long id) {
