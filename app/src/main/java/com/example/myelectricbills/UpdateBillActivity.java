@@ -38,7 +38,6 @@ public class UpdateBillActivity extends AppCompatActivity {
         editTextUnits = findViewById(R.id.editTextUpdateUnits);
         radioGroupRebate = findViewById(R.id.radioGroupUpdateRebate);
         buttonUpdate = findViewById(R.id.buttonSave);
-        // Rename the button label to "Update" in XML for clarity
 
         dbHelper = new DatabaseHelper(this);
 
@@ -59,7 +58,7 @@ public class UpdateBillActivity extends AppCompatActivity {
         setRebateRadio(currentBill.getRebate());
 
         // Handle update button click
-        buttonUpdate.setText("Update Bill"); // optional: visually show update purpose
+        buttonUpdate.setText("Update Bill");
         buttonUpdate.setOnClickListener(v -> {
             selectedMonth = spinnerMonth.getSelectedItem().toString();
             String unitsStr = editTextUnits.getText().toString().trim();
@@ -76,20 +75,20 @@ public class UpdateBillActivity extends AppCompatActivity {
             double totalCharges = calculateTotalCharges(units);
             double finalCost = totalCharges * (1 - rebate / 100.0);
 
-            // Update Bill object
+            // Update Bill Details object
             currentBill.setMonth(selectedMonth);
             currentBill.setUnits(units);
             currentBill.setRebate(rebate);
             currentBill.setTotalCharges(totalCharges);
             currentBill.setFinalCost(finalCost);
 
-            // Update in DB
+            // Update in the database
             boolean success = dbHelper.updateBill(currentBill);
 
             if (success) {
                 Toast.makeText(this, "Bill updated successfully", Toast.LENGTH_SHORT).show();
-                setResult(RESULT_OK); // ✅ This tells the previous activity to refresh the list
-                finish(); // ✅ Then finish the activity
+                setResult(RESULT_OK); // ✅ To refresh the list
+                finish(); // ✅ To finish the activity
             } else {
                 Toast.makeText(this, "Update failed", Toast.LENGTH_SHORT).show();
             }
@@ -111,7 +110,7 @@ public class UpdateBillActivity extends AppCompatActivity {
                 return i;
             }
         }
-        return 0; // Default to first
+        return 0;
     }
 
     private void setRebateRadio(int rebatePercent) {

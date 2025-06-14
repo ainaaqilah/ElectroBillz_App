@@ -39,7 +39,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-        // Drop older table if existed
+        // To drop older table if existed
         db.execSQL("DROP TABLE IF EXISTS " + TABLE_NAME);
         onCreate(db);
     }
@@ -69,7 +69,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         );
     }
 
-    // Fetch all bills from the database
+    // To fetch all bills from the database
     public ArrayList<Bill> getAllBills() {
         ArrayList<Bill> bills = new ArrayList<>();
         SQLiteDatabase db = this.getReadableDatabase();

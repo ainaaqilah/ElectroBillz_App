@@ -39,7 +39,7 @@ public class AddBillActivity extends AppCompatActivity {
 
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(
                 this,
-                R.array.months_array, // Make sure this is the correct array in strings.xml
+                R.array.months_array,
                 android.R.layout.simple_spinner_item
         );
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
@@ -71,7 +71,7 @@ public class AddBillActivity extends AppCompatActivity {
                 }
 
                 RadioButton selectedRadioButton = findViewById(selectedRebateId);
-                String rebateText = selectedRadioButton.getText().toString(); // e.g. "2%"
+                String rebateText = selectedRadioButton.getText().toString();
                 int rebatePercent = Integer.parseInt(rebateText.replace("%", ""));
 
                 // Step 3: Calculate total charges based on blocks

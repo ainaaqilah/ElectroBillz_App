@@ -35,7 +35,7 @@ public class BillAdapter extends BaseAdapter {
         return position;
     }
 
-    // This method connects each item to row_bill.xml
+    // This method is to connect each item to row_bill.xml
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         View row = convertView;
